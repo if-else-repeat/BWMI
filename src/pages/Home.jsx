@@ -1,31 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Cpu, 
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Cpu,
   Database,
   WifiOff,
   Fingerprint,
   ShieldCheck,
   Layers,
-  Layout
-} from 'lucide-react';
+  Layout,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <main className="flex-1 bg-[#f4f4f0] pb-24 font-sans text-gray-900">
-      
       {/* Top Header Lockup */}
       <header className="bg-black text-[#f4f4f0] px-4 py-3 brutal-border-b sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <span className="w-3 h-3 bg-[#10b981] inline-block animate-pulse" />
             <span className="font-bold uppercase tracking-widest text-sm md:text-base font-mono">
-              Build What Moves India <span className="text-gray-400 font-medium">(Varun Mayya x OpenAI)</span>
+              Build What Moves India{" "}
+              <span className="text-gray-400 font-medium">
+                (Varun Mayya x OpenAI)
+              </span>
             </span>
           </div>
           <div className="hidden sm:flex items-center gap-2">
-            <span className="bg-[#10b981] text-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">Online</span>
+            <span className="bg-[#10b981] text-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+              Online
+            </span>
             <span className="text-gray-400 text-xs tracking-wider uppercase font-bold">
               Final Submission Architecture
             </span>
@@ -34,7 +38,6 @@ export default function Home() {
       </header>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 space-y-20">
-        
         {/* HERO SECTION */}
         <section className="space-y-6">
           <div className="inline-block bg-white brutal-border border-l-4 border-l-[#048282] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gray-600 shadow-sm">
@@ -47,9 +50,13 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-2xl text-gray-700 font-sans leading-relaxed max-w-4xl font-medium pt-4">
-            A fundamental reimagining of Indian public-service digital infrastructure. Moving from fragile, 
-            server-dependent portals that crash under load to a resilient, 
-            <strong className="text-black"> offline-first, zero-data-loss browser architecture.</strong>
+            A fundamental reimagining of Indian public-service digital
+            infrastructure. Moving from fragile, server-dependent portals that
+            crash under load to a resilient,
+            <strong className="text-black">
+              {" "}
+              offline-first, zero-data-loss browser architecture.
+            </strong>
           </p>
         </section>
 
@@ -63,7 +70,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-            
             {/* Prototype 01 Card */}
             <a
               href="/prototype/epfo"
@@ -82,10 +88,14 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h3 className="text-3xl font-black uppercase tracking-tight leading-none">
-                  Resilient <br />EPFO Portal
+                  Resilient <br />
+                  EPFO Portal
                 </h3>
                 <p className="text-sm text-gray-600 font-medium leading-relaxed">
-                  A complete end-to-end replica of the official Employees' Provident Fund Organisation member portal. Features fully functional offline-first form filing, WebAuthn passkey login, and multi-user simulation.
+                  A complete end-to-end replica of the official Employees'
+                  Provident Fund Organisation member portal. Features fully
+                  functional offline-first form filing, WebAuthn passkey login,
+                  and multi-user simulation.
                 </p>
               </div>
             </a>
@@ -108,14 +118,17 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h3 className="text-3xl font-black uppercase tracking-tight leading-none text-white">
-                  Unified <br />Public Gateway
+                  Unified <br />
+                  Public Gateway
                 </h3>
                 <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                  Demonstrating visual and technical scalability across multiple government departments. A central citizen dashboard showcasing Income Tax, Parivahan, and e-SHRAM integrations using our standardized resilient architecture.
+                  Demonstrating visual and technical scalability across multiple
+                  government departments. A central citizen dashboard showcasing
+                  Income Tax, Parivahan, and e-SHRAM integrations using our
+                  standardized resilient architecture.
                 </p>
               </div>
             </a>
-
           </div>
         </section>
 
@@ -129,15 +142,17 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
             {/* Innovation 1 */}
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-[#048282]">
               <Database className="w-8 h-8 text-[#048282] mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                0ms Keystroke <br />Data Persistence
+                0ms Keystroke <br />
+                Data Persistence
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Forms write instantly to the browser's IndexedDB via Dexie.js. Power outages, network disconnects, or accidental tab closures result in exactly 0% data loss for the citizen.
+                Forms write instantly to the browser's IndexedDB via Dexie.js.
+                Power outages, network disconnects, or accidental tab closures
+                result in exactly 0% data loss for the citizen.
               </p>
             </div>
 
@@ -145,10 +160,13 @@ export default function Home() {
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-[#C1622D]">
               <WifiOff className="w-8 h-8 text-[#C1622D] mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                Offline Submission <br />Sync Queueing
+                Offline Submission <br />
+                Sync Queueing
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                If a citizen submits a critical claim during a 504 Gateway Timeout or dead network, the payload is securely cached locally and automatically replayed to the server upon reconnection.
+                If a citizen submits a critical claim during a 504 Gateway
+                Timeout or dead network, the payload is securely cached locally
+                and automatically replayed to the server upon reconnection.
               </p>
             </div>
 
@@ -156,13 +174,16 @@ export default function Home() {
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-black">
               <Fingerprint className="w-8 h-8 text-black mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                Bypassing SMS OTP <br />Bottlenecks
+                Bypassing SMS OTP <br />
+                Bottlenecks
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Replacing congested central SMS gateways with WebAuthn Passkeys. Leveraging local device hardware (Touch ID / Face ID) for instant, secure authentication without relying on cellular networks.
+                Replacing congested central SMS gateways with WebAuthn Passkeys.
+                Leveraging local device hardware (Touch ID / Face ID) for
+                instant, secure authentication without relying on cellular
+                networks.
               </p>
             </div>
-
           </div>
         </section>
 
@@ -181,10 +202,11 @@ export default function Home() {
                 <ShieldCheck className="w-8 h-8 text-[#10b981]" />
               </div>
               <h3 className="text-2xl font-black uppercase leading-tight">
-                Designed for <br />Real Indian Users
+                Designed for <br />
+                Real Indian Users
               </h3>
             </div>
-            
+
             <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               <div>
                 <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
@@ -192,7 +214,9 @@ export default function Home() {
                   High-Contrast Neo-Brutalism
                 </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Solid borders, stark contrast, and zero low-opacity gradients. Guarantees maximum legibility under bright outdoor sunlight on low-cost mobile screens.
+                  Solid borders, stark contrast, and zero low-opacity gradients.
+                  Guarantees maximum legibility under bright outdoor sunlight on
+                  low-cost mobile screens.
                 </p>
               </div>
               <div>
@@ -201,7 +225,9 @@ export default function Home() {
                   Space Mono for Data
                 </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Monospace typography isolates critical identifiers (UANs, PANs, Accounts). Prevents citizens from misreading '0' for 'O' or '1' for 'I'.
+                  Monospace typography isolates critical identifiers (UANs,
+                  PANs, Accounts). Prevents citizens from misreading '0' for 'O'
+                  or '1' for 'I'.
                 </p>
               </div>
               <div>
@@ -210,7 +236,9 @@ export default function Home() {
                   Cognitive Focus Workflow
                 </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Elimination of bloated marquee notices during forms. Standardized 3-step wizards (Identify → Declare → Sign) ensure one task per screen.
+                  Elimination of bloated marquee notices during forms.
+                  Standardized 3-step wizards (Identify → Declare → Sign) ensure
+                  one task per screen.
                 </p>
               </div>
               <div>
@@ -219,13 +247,14 @@ export default function Home() {
                   Native Bilingual Support
                 </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Every interface element instantly toggles between English and Hindi locally, without requiring a full page reload or server roundtrip.
+                  Every interface element instantly toggles between English and
+                  Hindi locally, without requiring a full page reload or server
+                  roundtrip.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
       </div>
     </main>
   );

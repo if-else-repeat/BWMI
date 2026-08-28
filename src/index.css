@@ -9,8 +9,10 @@
     --accent-green: #10b981;
     --accent-amber: #f59e0b;
     --accent-blue: #2563eb;
-    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: 'Space Mono', 'DM Mono', monospace;
+    --font-sans:
+      "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
+    --font-mono: "Space Mono", "DM Mono", monospace;
   }
 
   body {
@@ -28,7 +30,14 @@
   }
 
   /* Monospace for inputs, data tables, identifiers, and telemetry */
-  input, select, textarea, code, pre, kbd, samp, data {
+  input,
+  select,
+  textarea,
+  code,
+  pre,
+  kbd,
+  samp,
+  data {
     font-family: var(--font-mono);
   }
 }
@@ -91,7 +100,7 @@
 /* Dither / Grid background pattern */
 .bg-grid-pattern {
   background-size: 24px 24px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(5, 5, 5, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(5, 5, 5, 0.06) 1px, transparent 1px);
 }
