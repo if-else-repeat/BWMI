@@ -1,0 +1,17 @@
+{
+  "name": "BWMI Resilient Public Gateway",
+  "short_name": "BWMI Gateway",
+  "description": "Offline-First Resilient Architecture for Indian Public Digital Services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F4F0",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

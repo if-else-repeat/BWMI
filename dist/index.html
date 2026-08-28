@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="h-full bg-[#f4f4f0] text-[#050505]">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BWMI - Resilient Citizen Infrastructure | Varun Mayya x OpenAI Hackathon</title>
+    <meta name="description" content="Offline-first, zero-data-loss citizen service architecture solving 504 timeouts, cognitive overload, and auth failures on Indian public digital platforms." />
+    <meta name="theme-color" content="#f4f4f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-CQ3M-QN7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CRNx7Gb4.css">
+  </head>
+  <body class="h-full bg-[#f4f4f0] text-[#050505] antialiased selection:bg-black selection:text-white">
+    <div id="root" class="min-h-full flex flex-col"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(reg => {
+            console.log('BWMI ServiceWorker active for offline caching:', reg.scope);
+          }).catch(err => {
+            console.warn('SW registration skipped:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
