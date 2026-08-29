@@ -101,21 +101,31 @@ export function NetworkProvider({ children }) {
   useEffect(() => {
     const handleOnline = () => {
       setIsOnline(true);
-      addToast({ type: "info", title: "BROWSER DETECTED ONLINE", message: "Physical network connection restored. Background sync active." });
+      addToast({
+        type: "info",
+        title: "BROWSER DETECTED ONLINE",
+        message:
+          "Physical network connection restored. Background sync active.",
+      });
     };
     const handleOffline = () => {
       setIsOnline(false);
-      addToast({ type: "warning", title: "BROWSER DETECTED OFFLINE", message: "Physical connection lost. Switched to resilient offline mode." });
+      addToast({
+        type: "warning",
+        title: "BROWSER DETECTED OFFLINE",
+        message:
+          "Physical connection lost. Switched to resilient offline mode.",
+      });
     };
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
     if (!navigator.onLine) {
       setIsOnline(false);
     }
     return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
     };
   }, [addToast]);
 

@@ -10,7 +10,7 @@ import {
   AlertTriangle,
   XCircle,
   Clock,
-  ServerCrash
+  ServerCrash,
 } from "lucide-react";
 
 export default function Home() {
@@ -20,10 +20,17 @@ export default function Home() {
       <div className="bg-black text-white px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-            <img src="/favicon.svg" alt="BWMI" className="w-full h-full rounded" />
+            <img
+              src="/favicon.svg"
+              alt="BWMI"
+              className="w-full h-full rounded"
+            />
           </div>
           <h1 className="text-sm md:text-xl font-bold tracking-tight leading-tight">
-            Build What Moves India <span className="font-normal opacity-70">| Varun Mayya x OpenAI</span>
+            Build What Moves India{" "}
+            <span className="font-normal opacity-70">
+              | Varun Mayya x OpenAI
+            </span>
           </h1>
         </div>
         <div className="hidden sm:flex items-center gap-3">
@@ -35,7 +42,6 @@ export default function Home() {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 space-y-16">
-        
         {/* HERO SECTION */}
         <section className="space-y-6">
           <div className="inline-block bg-black text-white px-3 py-1 font-mono text-sm font-bold uppercase tracking-widest brutal-shadow-sm">
@@ -48,9 +54,10 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed font-medium">
-            A fundamental reimagining of Indian public-service digital infrastructure. 
-            Moving from fragile, server-dependent web portals that crash on 3G network drops 
-            to an offline-first, zero-data-loss browser architecture.
+            A fundamental reimagining of Indian public-service digital
+            infrastructure. Moving from fragile, server-dependent web portals
+            that crash on 3G network drops to an offline-first, zero-data-loss
+            browser architecture.
           </p>
         </section>
 
@@ -67,30 +74,43 @@ export default function Home() {
             <div className="bg-red-50 p-6 brutal-border border-t-[6px] border-t-red-600">
               <ServerCrash className="w-8 h-8 text-red-600 mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                Server Downtime &<br />504 Timeouts
+                Server Downtime &<br />
+                504 Timeouts
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Citizens spend 15–20 minutes filling out complex, 20-field forms. A momentary 3G network drop triggers a 504 Gateway Timeout. The page reloads blank, wiping all data and forcing them to start over.
+                Citizens spend 15–20 minutes filling out complex, 20-field
+                forms. A momentary 3G network drop triggers a 504 Gateway
+                Timeout. The page reloads blank, wiping all data and forcing
+                them to start over.
               </p>
             </div>
 
             <div className="bg-orange-50 p-6 brutal-border border-t-[6px] border-t-orange-600">
               <XCircle className="w-8 h-8 text-orange-600 mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                Cognitive Overload &<br />Clutter
+                Cognitive Overload &<br />
+                Clutter
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Critical numerical identifiers (12-digit UAN, PAN) get misread due to ambiguous proportional fonts. Essential action buttons are buried under bloated departmental banners and marquee notices.
+                Critical numerical identifiers (12-digit UAN, PAN) get misread
+                due to ambiguous proportional fonts. Essential action buttons
+                are buried under bloated departmental banners and marquee
+                notices.
               </p>
             </div>
 
             <div className="bg-yellow-50 p-6 brutal-border border-t-[6px] border-t-yellow-600">
               <Clock className="w-8 h-8 text-yellow-600 mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
-                The Authentication<br />"Loop of Death"
+                The Authentication
+                <br />
+                "Loop of Death"
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Heavy reliance on centralized SMS gateways creates bottlenecks. OTPs arrive after the timer expires, causing failed attempts and locking citizens out of their own accounts during critical emergencies.
+                Heavy reliance on centralized SMS gateways creates bottlenecks.
+                OTPs arrive after the timer expires, causing failed attempts and
+                locking citizens out of their own accounts during critical
+                emergencies.
               </p>
             </div>
           </div>
