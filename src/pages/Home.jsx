@@ -17,19 +17,19 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f4f0] font-sans pb-20 selection:bg-black selection:text-white">
       {/* HEADER BAR */}
-      <div className="bg-black text-white px-6 py-4 flex items-center justify-between sticky top-0 z-50">
-        <div className="flex items-center gap-4">
-          <div className="w-8 h-8 bg-white flex items-center justify-center font-black text-black text-xl leading-none brutal-border brutal-shadow-sm">
+      <div className="bg-black text-white px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-white flex items-center justify-center font-black text-black text-xl leading-none brutal-border brutal-shadow-sm flex-shrink-0">
             BW
           </div>
-          <h1 className="text-xl font-bold tracking-tight hidden sm:block">
-            Build What Moves India <span className="font-normal opacity-70">| Varun Mayya x OpenAI</span>
+          <h1 className="text-lg md:text-xl font-bold tracking-tight leading-tight truncate">
+            Build What Moves India <span className="font-normal opacity-70 hidden sm:inline">| Varun Mayya x OpenAI</span>
           </h1>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-3">
           <span className="text-xs font-bold uppercase tracking-widest text-[#10b981] flex items-center gap-2">
             <span className="w-2 h-2 bg-[#10b981] rounded-full animate-pulse" />
-            Hackathon Submission
+            Hackathon
           </span>
         </div>
       </div>
@@ -42,9 +42,9 @@ export default function Home() {
             Project Overview
           </div>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-black">
-            Resilient Civic-Tech <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048282] to-[#C1622D] stroke-black stroke-2">
-              Architecture
+            Build What <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048282] to-[#C1622D]">
+              Moves India
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed font-medium">
