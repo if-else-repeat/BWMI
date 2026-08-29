@@ -342,7 +342,7 @@ const EPFOPortalViews = ({ view, activeUser, lang, onNavigate }) => {
           <h3 className="text-xl font-bold text-[#1a3c3c] border-b-2 border-[#048282] pb-2">
             Member Passbook
           </h3>
-          <button className="brutal-btn bg-white text-[#048282] border-2 border-[#048282] px-4 py-2 rounded font-bold flex items-center gap-2 hover:bg-teal-50">
+          <button className="brutal-btn bg-white text-[#048282] border-2 border-[#048282] px-4 py-2 rounded font-bold flex items-center gap-2 hover:bg-teal-50" onClick={() => window.print()}>
             <Printer className="w-4 h-4" /> Print Ledger
           </button>
         </div>
@@ -1119,7 +1119,7 @@ const EPFOPortalViews = ({ view, activeUser, lang, onNavigate }) => {
                   Amount credited to account ending in{" "}
                   {activeUser.bankAccount.accountNumber.slice(-4)} via NEFT.
                 </div>
-                <button className="text-[#048282] font-semibold text-sm flex items-center gap-1 hover:underline">
+                <button className="text-[#048282] font-semibold text-sm flex items-center gap-1 hover:underline" onClick={() => alert("Download starting...")}>
                   <Download className="w-4 h-4" /> Download PDF
                 </button>
               </div>

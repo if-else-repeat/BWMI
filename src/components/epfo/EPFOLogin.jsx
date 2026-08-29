@@ -146,7 +146,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
               </h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-teal-50 p-2 rounded-full mr-3 group-hover:bg-teal-100 transition-colors">
                     <Key className="text-[#048282]" size={24} />
@@ -166,7 +166,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
                 </div>
               </div>
 
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-blue-50 p-2 rounded-full mr-3 group-hover:bg-blue-100 transition-colors">
                     <Search className="text-blue-600" size={24} />
@@ -186,7 +186,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
                 </div>
               </div>
 
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-green-50 p-2 rounded-full mr-3 group-hover:bg-green-100 transition-colors">
                     <BadgeCheck className="text-green-600" size={24} />
@@ -206,7 +206,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
                 </div>
               </div>
 
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-teal-50 p-2 rounded-full mr-3 group-hover:bg-teal-100 transition-colors">
                     <UserPlus className="text-[#048282]" size={24} />
@@ -226,7 +226,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
                 </div>
               </div>
 
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-purple-50 p-2 rounded-full mr-3 group-hover:bg-purple-100 transition-colors">
                     <CreditCard className="text-purple-600" size={24} />
@@ -246,7 +246,7 @@ const EPFOLogin = ({ lang = "en", onLogin, onPasskeyLogin }) => {
                 </div>
               </div>
 
-              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between">
+              <div className="border border-gray-200 rounded p-4 hover:shadow-md transition-shadow cursor-pointer group flex flex-col justify-between" onClick={() => alert("This quick service has been temporarily disabled for maintenance. Please login to use full features.")}>
                 <div className="flex items-center mb-2">
                   <div className="bg-orange-50 p-2 rounded-full mr-3 group-hover:bg-orange-100 transition-colors">
                     <FileHeart className="text-orange-500" size={24} />

@@ -68,7 +68,7 @@ export function NetworkProvider({ children }) {
     }
   }, [isOnline, isSyncing, addToast]);
 
-  // Toggle network state
+  // Toggle network state manually for simulation
   const toggleNetwork = useCallback(() => {
     setIsOnline((prev) => {
       const nextState = !prev;
@@ -95,6 +95,28 @@ export function NetworkProvider({ children }) {
       }
       return nextState;
     });
+  }, [addToast]);
+
+  // Real browser online/offline detection
+  useEffect(() => {
+    const handleOnline = () => {
+      setIsOnline(true);
+      addToast({ type: "info", title: "BROWSER DETECTED ONLINE", message: "Physical network connection restored. Background sync active." });
+    };
+    const handleOffline = () => {
+      setIsOnline(false);
+      addToast({ type: "warning", title: "BROWSER DETECTED OFFLINE", message: "Physical connection lost. Switched to resilient offline mode." });
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    if (!navigator.onLine) {
+      setIsOnline(false);
+    }
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
   }, [addToast]);
 
   // When network transitions from offline to online, auto-process queue

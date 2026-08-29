@@ -1,76 +1,111 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Cpu,
   Database,
   WifiOff,
   Fingerprint,
-  ShieldCheck,
+  Cpu,
   Layers,
-  Layout,
+  ShieldCheck,
+  AlertTriangle,
+  XCircle,
+  Clock,
+  ServerCrash
 } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex-1 bg-[#f4f4f0] pb-24 font-sans text-gray-900">
-      {/* Top Header Lockup */}
-      <header className="bg-black text-[#f4f4f0] px-4 py-3 brutal-border-b sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span className="w-3 h-3 bg-[#10b981] inline-block animate-pulse" />
-            <span className="font-bold uppercase tracking-widest text-sm md:text-base font-mono">
-              Build What Moves India{" "}
-              <span className="text-gray-400 font-medium">
-                (Varun Mayya x OpenAI)
-              </span>
-            </span>
+    <main className="min-h-screen bg-[#f4f4f0] font-sans pb-20 selection:bg-black selection:text-white">
+      {/* HEADER BAR */}
+      <div className="bg-black text-white px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+        <div className="flex items-center gap-4">
+          <div className="w-8 h-8 bg-white flex items-center justify-center font-black text-black text-xl leading-none brutal-border brutal-shadow-sm">
+            BW
           </div>
-          <div className="hidden sm:flex items-center gap-2">
-            <span className="bg-[#10b981] text-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
-              Online
-            </span>
-            <span className="text-gray-400 text-xs tracking-wider uppercase font-bold">
-              Final Submission Architecture
-            </span>
-          </div>
+          <h1 className="text-xl font-bold tracking-tight hidden sm:block">
+            Build What Moves India <span className="font-normal opacity-70">| Varun Mayya x OpenAI</span>
+          </h1>
         </div>
-      </header>
+        <div className="flex items-center gap-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#10b981] flex items-center gap-2">
+            <span className="w-2 h-2 bg-[#10b981] rounded-full animate-pulse" />
+            Hackathon Submission
+          </span>
+        </div>
+      </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 space-y-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 space-y-16">
+        
         {/* HERO SECTION */}
         <section className="space-y-6">
-          <div className="inline-block bg-white brutal-border border-l-4 border-l-[#048282] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gray-600 shadow-sm">
-            Architectural Brief
+          <div className="inline-block bg-black text-white px-3 py-1 font-mono text-sm font-bold uppercase tracking-widest brutal-shadow-sm">
+            Project Overview
           </div>
-
-          <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tighter text-black leading-[0.9] font-sans">
-            Build What <br className="hidden sm:block" />
-            <span className="text-[#048282]">Moves India.</span>
+          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-black">
+            Resilient Civic-Tech <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048282] to-[#C1622D] stroke-black stroke-2">
+              Architecture
+            </span>
           </h1>
-
-          <p className="text-lg sm:text-2xl text-gray-700 font-sans leading-relaxed max-w-4xl font-medium pt-4">
-            A fundamental reimagining of Indian public-service digital
-            infrastructure. Moving from fragile, server-dependent portals that
-            crash under load to a resilient,
-            <strong className="text-black">
-              {" "}
-              offline-first, zero-data-loss browser architecture.
-            </strong>
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed font-medium">
+            A fundamental reimagining of Indian public-service digital infrastructure. 
+            Moving from fragile, server-dependent web portals that crash on 3G network drops 
+            to an offline-first, zero-data-loss browser architecture.
           </p>
         </section>
 
-        {/* THE LAUNCHPAD: Action Cards */}
-        <section className="space-y-6">
+        {/* SECTION: THE PROBLEM */}
+        <section className="space-y-8 pt-6">
           <div className="flex items-center gap-3 border-b-[3px] border-black pb-3">
-            <Layout className="w-8 h-8 text-black" />
+            <AlertTriangle className="w-8 h-8 text-black" />
             <h2 className="text-2xl font-black uppercase tracking-tight text-black font-sans">
-              Interactive Working Prototypes
+              The Problem: Systemic Points of Failure
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
-            {/* Prototype 01 Card */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-red-50 p-6 brutal-border border-t-[6px] border-t-red-600">
+              <ServerCrash className="w-8 h-8 text-red-600 mb-4" />
+              <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
+                Server Downtime &<br />504 Timeouts
+              </h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Citizens spend 15–20 minutes filling out complex, 20-field forms. A momentary 3G network drop triggers a 504 Gateway Timeout. The page reloads blank, wiping all data and forcing them to start over.
+              </p>
+            </div>
+
+            <div className="bg-orange-50 p-6 brutal-border border-t-[6px] border-t-orange-600">
+              <XCircle className="w-8 h-8 text-orange-600 mb-4" />
+              <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
+                Cognitive Overload &<br />Clutter
+              </h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Critical numerical identifiers (12-digit UAN, PAN) get misread due to ambiguous proportional fonts. Essential action buttons are buried under bloated departmental banners and marquee notices.
+              </p>
+            </div>
+
+            <div className="bg-yellow-50 p-6 brutal-border border-t-[6px] border-t-yellow-600">
+              <Clock className="w-8 h-8 text-yellow-600 mb-4" />
+              <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
+                The Authentication<br />"Loop of Death"
+              </h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Heavy reliance on centralized SMS gateways creates bottlenecks. OTPs arrive after the timer expires, causing failed attempts and locking citizens out of their own accounts during critical emergencies.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION: PROTOTYPES */}
+        <section className="space-y-8 pt-6">
+          <div className="flex items-center gap-3 border-b-[3px] border-black pb-3">
+            <Database className="w-8 h-8 text-black" />
+            <h2 className="text-2xl font-black uppercase tracking-tight text-black font-sans">
+              Functional Prototypes
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <a
               href="/prototype/epfo"
               target="_blank"
@@ -79,15 +114,15 @@ export default function Home() {
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-[#048282]" />
               <div className="flex items-center justify-between mb-8">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#048282] bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#048282] bg-teal-50 px-3 py-1 rounded-full border border-[#048282]/20">
                   Prototype 01
                 </span>
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-[#048282] transition-colors">
-                  <ArrowRight className="w-5 h-5 text-gray-900 group-hover:text-white transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-white transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
               <div className="space-y-4">
-                <h3 className="text-3xl font-black uppercase tracking-tight leading-none">
+                <h3 className="text-3xl font-black uppercase tracking-tight leading-none text-black">
                   Resilient <br />
                   EPFO Portal
                 </h3>
@@ -100,7 +135,6 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Prototype 02 Card */}
             <a
               href="/prototype/gateway"
               target="_blank"
@@ -133,16 +167,15 @@ export default function Home() {
         </section>
 
         {/* SECTION: ARCHITECTURAL INNOVATIONS */}
-        <section className="space-y-8 pt-10">
+        <section className="space-y-8 pt-6">
           <div className="flex items-center gap-3 border-b-[3px] border-black pb-3">
             <Cpu className="w-8 h-8 text-black" />
             <h2 className="text-2xl font-black uppercase tracking-tight text-black font-sans">
-              Core Architectural Innovations
+              Core Architectural Solutions
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Innovation 1 */}
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-[#048282]">
               <Database className="w-8 h-8 text-[#048282] mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
@@ -156,7 +189,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Innovation 2 */}
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-[#C1622D]">
               <WifiOff className="w-8 h-8 text-[#C1622D] mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
@@ -170,7 +202,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Innovation 3 */}
             <div className="bg-white p-6 brutal-border border-t-[6px] border-t-black">
               <Fingerprint className="w-8 h-8 text-black mb-4" />
               <h3 className="text-lg font-bold text-black uppercase mb-3 leading-tight">
@@ -188,7 +219,7 @@ export default function Home() {
         </section>
 
         {/* SECTION: DESIGN SYSTEM */}
-        <section className="space-y-8 pt-10">
+        <section className="space-y-8 pt-6">
           <div className="flex items-center gap-3 border-b-[3px] border-black pb-3">
             <Layers className="w-8 h-8 text-black" />
             <h2 className="text-2xl font-black uppercase tracking-tight text-black font-sans">
