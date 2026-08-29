@@ -19,11 +19,11 @@ export default function Home() {
       {/* HEADER BAR */}
       <div className="bg-black text-white px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-white flex items-center justify-center font-black text-black text-xl leading-none brutal-border brutal-shadow-sm flex-shrink-0">
-            BW
+          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+            <img src="/favicon.svg" alt="BWMI" className="w-full h-full rounded" />
           </div>
-          <h1 className="text-lg md:text-xl font-bold tracking-tight leading-tight truncate">
-            Build What Moves India <span className="font-normal opacity-70 hidden sm:inline">| Varun Mayya x OpenAI</span>
+          <h1 className="text-sm md:text-xl font-bold tracking-tight leading-tight">
+            Build What Moves India <span className="font-normal opacity-70">| Varun Mayya x OpenAI</span>
           </h1>
         </div>
         <div className="hidden sm:flex items-center gap-3">
@@ -42,7 +42,7 @@ export default function Home() {
             Project Overview
           </div>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-black">
-            Build What <br className="hidden md:block" />
+            Build What <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#048282] to-[#C1622D]">
               Moves India
             </span>
